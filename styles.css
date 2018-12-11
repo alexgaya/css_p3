@@ -1,0 +1,479 @@
+body{
+	background-color: #5BBA6F;
+	margin: 0;
+	padding: 0;
+}
+#wrapper{
+	display: grid;
+	grid-template-columns: repeat(12,1fr);
+	grid-row-gap: 5px;
+}
+
+header{
+
+	grid-area: 1/1/2/13;
+}
+form{
+	grid-area: 1/9/2/12;
+	align-self: center;
+	margin-left: auto;
+}
+form i{
+	height: 19px;
+	padding: 5px;
+	color: white;
+	background-color: #2A9134;
+}
+form i:hover{
+	cursor: pointer;
+}
+form input{
+	height: 27px;
+	margin-right: -3px;
+    border: none;
+    background-color: #e2e1e1;
+    opacity: 0.5;
+    margin: 0;
+}
+#logo{
+	grid-area: 1/2/2/7;
+    align-self: center;
+    padding: 10px 0;
+}
+#menu{
+	grid-area: 2/1/3/13;
+	background-color: #054A29;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+#menu i{
+	display: none;
+}
+nav{
+	grid-area: 1/3/2/11;
+	margin: auto;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	background: #054A29;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+li{
+    color: #fff;
+    background: #054A29;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+  
+li a{
+    color: #fff;
+}
+
+li:hover{
+    background: #137547;
+    cursor: pointer;
+}
+
+.dropdown li:first-child{
+	border-top: 2px solid #2A9134;
+}
+.dropdown li a{
+	transition: all 0.5s ease;
+}
+.dropdown li{
+	box-sizing: border-box;
+}
+.dropdown li:hover{
+	border-right:  3px solid #2A9134;
+}
+.dropdown li:hover > a{
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+ul li ul{
+    background: #054A29;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 7rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover{	
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+ul li ul li{
+	clear: both;
+	width: 100%;
+}
+#content{
+	box-shadow: 0 -5px 5px -5px #888888;
+	background-color: #3FA34D;
+	grid-area: 3/1/4/13;
+}
+#randomContent1{
+	grid-area: 3/2/4/8;
+	padding: 5px;
+	padding-right: 50px;
+	border-right: dotted .5px;
+}
+#randomContent2{
+	grid-area: 3/8/4/12;
+	height: 50px;
+	padding: 5px;
+	padding-left: 20px;
+}
+#randomContent2 span{
+	float: right;
+}
+#title-background{
+	grid-area: 4/1/5/13;
+	box-shadow: 0 -5px 5px -5px #888888;
+	background-color: #3FA34D;
+	margin-bottom:-5px;
+}
+#title{
+	grid-area: 4/2/5/12;
+	padding: 40px 0;
+}
+#card-background{
+	background-color: #3FA34D;
+	grid-area: 5/1/6/13;
+}
+#cards{
+	grid-area: 5/2/6/12;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-column-gap: 20px;
+}
+.card{
+	margin: 10px auto;
+	max-width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.card img{
+	border-radius: 3px;
+    border: 2px solid #137547;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.card button{
+	padding: 7px;
+	width: 60%;
+	border-radius: 2px;
+	border: none;
+	transition: all 0.5s ease;
+}
+.card button:hover{
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	cursor: pointer;
+}
+#contact{
+	grid-area: 6/1/7/13;
+	box-shadow: 0 -5px 5px -5px #888888;
+	background-color: #3FA34D;
+}
+
+#contact-container{
+	grid-area: 6/2/7/12;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+}
+
+.one{
+	grid-area: 1/1/2/2;
+	padding: 30px;
+
+}
+.contact-cards p {
+	font: 14px/24px Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+.contact-cards h5{
+	font: bold 12px/24px Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+
+.two{
+	grid-area: 1/2/2/3;
+	padding: 30px;
+	border-left: 1px solid #2A9134;
+}
+.three{
+	grid-area: 1/3/2/4;
+	padding: 30px;
+	border-left: 1px solid #2A9134;
+}
+.three button{
+	padding: 7px;
+	border-radius: 2px;
+	border: none;
+	transition: all 0.5s ease;
+}
+.three button:hover{
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	cursor: pointer;
+}
+footer{
+	grid-area: 7/1/8/13;
+	background-color: #054A29;
+}
+#copy-footer{
+	font: 11px/30px Arial, Helvetica, sans-serif;
+	grid-area: 7/5/8/12;
+	margin-left: auto;
+	color: white;
+}
+.icons{
+    margin-left: 10px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.icons a{
+    display: inline-block;
+    width: 26px;
+    height: 27px;
+}
+#fb{
+    background: url("img/image-sprite.png") -6px -196px;
+    background-size: 715%;
+}
+#twt{
+     background: url("img/image-sprite.png") -65px -196px;
+    background-size: 715%;
+}
+#ggl{
+    background: url("img/image-sprite.png") -6px -706px;
+    background-size: 715%;
+}
+#pint{
+    background: url("img/image-sprite.png") -154px -265px;
+    background-size: 715%;
+}
+
+
+
+#overlay{
+	grid-area: 3/1/7/13;
+	background-color: rgba(0,0,0,.8);
+	width: 100%;
+	margin-top: -5px;
+	margin-bottom: -5px;
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	display: none;
+}
+#contactInfo{
+	display: none;
+	overflow: hidden;
+	margin: 0 10px;
+	grid-area: 1/1/2/3;
+	color: white;
+}
+#contact-form{
+	display: none;
+	margin: 0 10px;
+	grid-area: 1/3/2/7;
+	color: white;
+}
+#contact-form input{
+	width: 80%;
+}
+#contact-form textarea{
+	width: 80%;
+	height: 100px;
+}
+#contact-form #enviar{
+	padding: 7px;
+	width: 100px;
+	border-radius: 2px;
+	border: none;
+	transition: all 0.5s ease;
+}
+#contact-form #enviar:hover{
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	cursor: pointer;
+}
+#overlayButton{
+	color: white;
+	padding: 0;
+	grid-area: 1/6/2/7;
+	height: 20px;
+	width: 20px;
+	margin: 0 auto;
+	cursor: pointer;
+	text-align: center;
+	font-size: 25px;
+    margin-top: 10px;
+}
+#r1{
+	display: none;
+}
+#r2{
+	display: none;
+}
+
+
+@media(max-width: 940px){nav{grid-area: 1/2/2/12;}}
+
+@media(max-width: 786px){form{grid-area: 1/9/2/13; margin: 0;}}
+
+@media(max-width: 756px){
+	nav li{padding: 10px;} 
+	nav{grid-area: 1/1/2/13;}
+    .dropdown{margin-top: .65rem;}
+	.contact-cards{padding: 10px;}
+}
+
+@media(max-width: 650px){
+	form{grid-area: 1/10/2/13;}
+	form input{width: 100px;}
+}
+
+@media (max-width: 600px){
+	form{
+		margin-left: auto;
+		grid-area: 1/9/2/12;
+	}
+	form input{
+		display: none;
+	}
+	#menu{
+		grid-template-columns: 1fr;
+		position: relative;
+	}
+	#menu i{
+		display: block;
+		font-size: 50px;
+		grid-area: 1/1/2/2;
+		margin-left: 30px;
+		width: 45px;
+	}
+	#menu .fa-bars:before{
+		cursor: pointer;
+	}
+	#menu nav{
+		display: none;
+		grid-area: 2/1/3/2;
+		width: 100%;
+		text-align: center;
+	}
+	#menu nav ul{
+		width: 100%;
+	}
+	#menu nav ul li{
+		float: none;
+	}
+	ul li:hover > ul,
+	ul li ul:hover{	
+		visibility: hidden;
+		opacity: 0;
+		display: none;
+	}
+	.dropdown{
+		z-index: 1;
+		border-bottom: 2px solid rgb(42, 145, 52);
+        margin-top: 1rem;
+	}
+	#title{
+		text-align: center;
+	}
+	#contact{
+		display: none;
+	}
+	#contact-container{
+		grid-area: 6/1/7/13;
+		grid-template-columns: 1fr;
+		grid-row-gap: 5px;
+	}
+	.one{
+		grid-area: 1/1/2/2;
+	}
+	.two{
+		grid-area: 2/1/3/2;
+		border-left: none;
+	}
+	.three{
+		grid-area: 3/1/4/2;
+		border-left: none;
+	}
+	.contact-cards{
+		box-shadow: 0 -5px 5px -5px #888888;
+		background-color: #3FA34D;
+		padding: 30px;
+	}
+	.card{
+		margin-bottom: 50px;
+	}
+	.card button{
+		width: 100%;
+	}
+	#randomContent1{
+		display: none;
+	}
+	#randomContent2{
+		display: none;
+	}
+	#content{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-row-gap: 5px;
+		background-color: #5BBA6F;
+	}
+	#r1{
+		display: block;
+		grid-area: 1/1/2/2;
+		padding: 30px;
+		box-shadow: 0 -5px 5px -5px #888888;
+		background-color: #3FA34D;
+	}
+	#r2{
+		display: block;
+		grid-area: 2/1/3/2;
+		padding: 30px;
+		box-shadow: 0 -5px 5px -5px #888888;
+		background-color: #3FA34D;
+	}
+	#logo{
+		width: 200px;
+	}
+	#overlay{
+		grid-template-columns: 9fr 1fr;
+		grid-template-rows: 238px 660px;
+	}
+	#contactInfo{
+		grid-area: 1/1/2/2;
+	}
+	#contact-form{
+		grid-area: 2/1/3/3;
+	}
+	#overlayButton{
+		grid-area: 1/2/2/3;
+	}
+
+}
+
+@media(max-width: 410px){
+    #copy-footer{grid-area: 7/6/8/13;}
+}
